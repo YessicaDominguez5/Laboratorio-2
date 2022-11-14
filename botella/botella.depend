@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1668392087 source:c:\users\yeppi\documents\utn\laboratorio2_\poo\botella\botella\src\botella.cpp
+	<iostream>
+	"botella.h"
+
+1668385455 c:\users\yeppi\documents\utn\laboratorio2_\poo\botella\botella\include\botella.h
+
+1668392112 source:c:\users\yeppi\documents\utn\laboratorio2_\poo\botella\botella\main.cpp
+	<iostream>
+	<clocale>
+	"botella.h"
+
