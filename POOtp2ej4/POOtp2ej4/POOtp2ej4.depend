@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1680921531 source:c:\users\juaniyeppi\documents\programacion2\pootp2ej4\pootp2ej4\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+
