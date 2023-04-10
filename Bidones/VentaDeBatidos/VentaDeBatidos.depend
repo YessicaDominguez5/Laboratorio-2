@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1681091112 source:c:\users\yeppi\documents\utn\laboratorio2_\poo\bidones\ventadebatidos\src\bidon.cpp
+	"Bidon.h"
+
+1681091112 c:\users\yeppi\documents\utn\laboratorio2_\poo\bidones\ventadebatidos\include\bidon.h
+	<iostream>
+
+1681090009 source:c:\users\yeppi\documents\utn\laboratorio2_\poo\bidones\ventadebatidos\src\venta.cpp
+	"Venta.h"
+
+1681090009 c:\users\yeppi\documents\utn\laboratorio2_\poo\bidones\ventadebatidos\include\venta.h
+
+1681092826 source:c:\users\yeppi\documents\utn\laboratorio2_\poo\bidones\ventadebatidos\main.cpp
+	<iostream>
+	"Bidon.h"
+	"Venta.h"
+
