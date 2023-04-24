@@ -1,0 +1,36 @@
+# depslib dependency file v1.0
+1682305934 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\fecha.cpp
+	"Fecha.h"
+	<string>
+
+1682305860 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\fecha.h
+	<string>
+
+1682305906 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\listadetareas.cpp
+	"ListaDeTareas.h"
+
+1682304561 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\listadetareas.h
+	"Tarea.h"
+
+1682301974 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\dificultad.cpp
+	"Dificultad.h"
+
+1682301923 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\dificultad.h
+	<string>
+	<iostream>
+
+1682301848 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\tarea.cpp
+	"Tarea.h"
+
+1682301472 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\tarea.h
+	<string>
+	<iostream>
+	"Fecha.h"
+	"Dificultad.h"
+
+1682304698 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\main.cpp
+	<iostream>
+	"Dificultad.h"
+	"Tarea.h"
+	"ListaDeTareas.h"
+

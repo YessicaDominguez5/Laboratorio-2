@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1682198742 source:c:\users\juaniyeppi\documents\laboratorio-2\ranking\include\fecha.cpp
+	"Fecha.h"
+	<string>
+
+1682198742 c:\users\juaniyeppi\documents\laboratorio-2\ranking\include\fecha.h
+	<string>
+
+1682220830 source:c:\users\juaniyeppi\documents\laboratorio-2\ranking\src\pelicula.cpp
+	"Pelicula.h"
+	"Fecha.h"
+
+1682220833 c:\users\juaniyeppi\documents\laboratorio-2\ranking\include\pelicula.h
+	"Fecha.h"
+
+1682273385 source:c:\users\juaniyeppi\documents\laboratorio-2\ranking\main.cpp
+	<iostream>
+	"Pelicula.h"
+	"Ranking.h"
+	"Cargar.h"
+
+1682273385 source:c:\users\juaniyeppi\documents\laboratorio-2\ranking\cargar.cpp
+	"Cargar.h"
+	<iostream>
+
+1682221015 c:\users\juaniyeppi\documents\laboratorio-2\ranking\cargar.h
+	"Pelicula.h"
+
+1682220901 c:\users\juaniyeppi\documents\laboratorio-2\ranking\include\ranking.h
+	"Pelicula.h"
+
+1682269162 source:c:\users\juaniyeppi\documents\laboratorio-2\ranking\src\ranking.cpp
+	"Ranking.h"
+	<iostream >
+
