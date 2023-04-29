@@ -74,11 +74,6 @@ int main()
 
 
         }
-
-        cout << "Ingrese una opcion: ";
-        cin >> opcion;
-
-
     } while(opcion =! 4);
 
     return 0;

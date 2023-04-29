@@ -58,4 +58,13 @@ bool Tarea::GetEstado()
 
 }
 
+void Tarea::SetEstado(bool hecha){
+
+_estado = hecha;
+
+
+}
+
+
+
 

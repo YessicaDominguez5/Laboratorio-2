@@ -24,6 +24,8 @@ class Tarea
         Dificultad GetDificultad();
         Fecha GetFecha();
         bool GetEstado();
+        void SetEstado(bool hecha);
+
 
 
 
