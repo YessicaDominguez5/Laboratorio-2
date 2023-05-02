@@ -1,5 +1,6 @@
 #include "Tarea.h"
 
+
 Tarea::Tarea()
 {
     _id = 0;
@@ -7,6 +8,8 @@ Tarea::Tarea()
     _dificultad = Dificultad();
     _fechaLimite = Fecha();
     _estado = 0;
+    string *_etiquetas = nullptr;
+
 
 }
 
@@ -20,8 +23,28 @@ Tarea::Tarea(int id, string descripcion, Dificultad dificultad, Fecha fecha, boo
     _estado = estado;
 
 
-}
-int Tarea:: GetId()
+    int CantEtiq;
+
+    cout << "Ingrese la cantidad de etiquetas de la tarea: ";
+    cin >> CantEtiq;
+
+    if(CantEtiq <= 10 && CantEtiq > 0)
+    {
+        _etiquetas = new string[CantEtiq];
+
+
+        for(int i = 0; i < CantEtiq ; i++)
+        {
+            cout << "Ingrese los nombres de las etiquetas:";
+            cin >>  _etiquetas[i];
+
+        }
+
+        system("pause");
+        system("cls");
+
+}}
+int Tarea::GetId()
 {
 
     return _id;
@@ -51,10 +74,13 @@ Fecha Tarea::GetFecha()
 
 
 }
-bool Tarea::GetEstado()
+string Tarea::GetEstado()
 {
-
-    return _estado;
+    if(_estado){
+        return "Hecha";
+    } else {
+        return "Pendiente";
+        }
 
 }
 
@@ -62,6 +88,17 @@ void Tarea::SetEstado(bool hecha){
 
 _estado = hecha;
 
+
+}
+void Tarea::SetEtiqueta(string* eti){
+
+_etiquetas = eti;
+
+}
+
+string Tarea::GetEtiqueta(){
+
+return *_etiquetas;
 
 }
 

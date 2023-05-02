@@ -26,6 +26,7 @@ class Fecha
         void AgregarDias(int cantidadDias);
         void RestarDia();
         void RestarDias(int cantidadDias);
+        int DiferenciaDias(Fecha fechaInicial, Fecha fechaFinal);
 
 
 

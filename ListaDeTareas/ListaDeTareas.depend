@@ -1,34 +1,36 @@
 # depslib dependency file v1.0
-1682305934 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\fecha.cpp
+1682949772 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\fecha.cpp
 	"Fecha.h"
 	<string>
 
-1682305860 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\fecha.h
+1682825053 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\fecha.h
 	<string>
 
-1682305906 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\listadetareas.cpp
+1682978157 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\listadetareas.cpp
 	"ListaDeTareas.h"
+	<iomanip>
 
-1682304561 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\listadetareas.h
+1682978027 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\listadetareas.h
 	"Tarea.h"
 
-1682301974 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\dificultad.cpp
+1682800739 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\dificultad.cpp
 	"Dificultad.h"
 
-1682301923 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\dificultad.h
+1682800739 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\dificultad.h
 	<string>
 	<iostream>
 
-1682301848 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\tarea.cpp
+1682978312 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\src\tarea.cpp
 	"Tarea.h"
 
-1682301472 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\tarea.h
+1682977375 c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\include\tarea.h
 	<string>
 	<iostream>
 	"Fecha.h"
 	"Dificultad.h"
+	<stdlib.h>
 
-1682304698 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\main.cpp
+1682978026 source:c:\users\juaniyeppi\documents\laboratorio-2\listadetareas\main.cpp
 	<iostream>
 	"Dificultad.h"
 	"Tarea.h"

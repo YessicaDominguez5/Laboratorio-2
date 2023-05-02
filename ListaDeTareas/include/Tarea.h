@@ -4,6 +4,7 @@
 #include <iostream>
 #include "Fecha.h"
 #include "Dificultad.h"
+#include <stdlib.h>
 using namespace std;
 
 
@@ -15,6 +16,7 @@ class Tarea
         Dificultad _dificultad;
         Fecha _fechaLimite;
         bool _estado;
+        string *_etiquetas = nullptr;
 
     public:
         Tarea();
@@ -23,8 +25,11 @@ class Tarea
         string GetDescripcion();
         Dificultad GetDificultad();
         Fecha GetFecha();
-        bool GetEstado();
+        string GetEstado();
         void SetEstado(bool hecha);
+        void SetEtiqueta(string* eti);
+        string GetEtiqueta();
+
 
 
 

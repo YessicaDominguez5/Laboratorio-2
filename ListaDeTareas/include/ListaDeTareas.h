@@ -18,7 +18,11 @@ class ListaDeTareas
         string ObtenerDescripcion(int indice);
         void TareaHecha(int idHecho);
         void CargarTareas();
-        bool VectorOriginal();
+        Fecha ObtenerFecha(int i);
+        string GetEtiquetaTarea(int i);
+        string ObtenerDificultad(int i);
+        string ObtenerEstado(int i);
+
 
 
 

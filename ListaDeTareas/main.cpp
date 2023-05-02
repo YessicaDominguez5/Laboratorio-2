@@ -18,6 +18,7 @@ int main()
 
     Tarea t;
     ListaDeTareas l;
+    Fecha f;
 
 
     // cout << t.GetId() << "\t" << t.GetDescripcion() << "\t" << t.GetDificultad().GetDificultad() << "\t" << t.GetFecha().ToString() << "\t" << t.GetEstado();
@@ -25,7 +26,7 @@ int main()
     int opcion;
     do
     {
-
+        system("cls");
         cout << "1. CARGAR TAREAS" << endl;
         cout << "2. MOSTRAR TAREAS POR LIMITE DE TIEMPO" << endl;
         cout << "3. VISUALIZAR TAREA" << endl;
@@ -83,7 +84,10 @@ int main()
                     {
 
 
-                        cout << "El ID corresponde a la tarea: " << l.ObtenerDescripcion(i) << endl << endl;
+                        cout << "El ID corresponde a la tarea: " << l.ObtenerDescripcion(i) << endl;
+                        cout << "El nivel de dificultad es: " << l.ObtenerDificultad(i) << endl;
+                        cout << "La fecha limite es: " << l.ObtenerFecha(i).ToString() << endl;
+                        cout << "Estado: " << l.ObtenerEstado(i) << endl;
 
                         system("pause");
                         system("cls");
@@ -101,32 +105,48 @@ int main()
 
         case 4:
         {
-            bool PrimeraVez = false;
+            cout << "Ingrese el Id de la tarea: ";
+            cin >>idConocerTarea;
 
-            if(!PrimeraVez){
+            for(int i = 0; i < 10; i++){
 
+                if(idConocerTarea == l.ObtenerIdTarea(i)){
 
-            PrimeraVez = l.VectorOriginal();
+                    l.TareaHecha(i);
+
+                }
+
 
 
             }
 
-
-            cout << "Ingrese el ID para marcar la tarea realizada: ";
-            cin >> idConocerTarea;
-
-            l.TareaHecha(idConocerTarea);
-
+            system("pause");
+            system("cls");
 
             break;
+
         }
 
 
         case 5:
         {
+            system("cls");
+            cout << "Dias para la entrega de la tarea: " << endl << endl;
 
 
 
+            for(int i = 0; i < 10; i++){
+
+            cout << l.ObtenerDescripcion(i) << "\t" << f.DiferenciaDias(Fecha(1,5,2023), l.ObtenerFecha(i)) << endl;
+
+            }
+
+
+
+
+
+
+            system("pause");
             break;
         }
 
