@@ -21,10 +21,12 @@ class Fecha
         int GetAnio();
         bool EsBisiesto();
         string ToString();
+        string ToStringOtroFormato();
         void AgregarDia();
         void AgregarDias(int cantidadDias);
         void RestarDia();
         void RestarDias(int cantidadDias);
+        int DiferenciaDias(Fecha fechaInicial, Fecha fechaFinal);
 
 
 

@@ -111,6 +111,37 @@ string Fecha::ToString()
 
 
 }
+string Fecha::ToStringOtroFormato()
+{
+
+    string fechaformateada("");
+    string DD = to_string(_dia); // to_string castea el int _dia a un string
+    string MM = to_string(_mes);
+    string YYYY = to_string(_anio);
+
+    if(_dia < 10)
+    {
+
+        DD = "0" + to_string(_dia);
+
+
+    }
+    if(_mes < 10)
+    {
+
+        MM = "0" + to_string(_mes);
+
+
+    }
+
+    fechaformateada = YYYY + "/" + MM + "/"+ DD;
+
+    return fechaformateada;
+
+
+
+
+}
 
 void Fecha::AgregarDia()
 {
@@ -123,6 +154,8 @@ void Fecha::AgregarDia()
     }
 
     _dia++;
+    int d = _dia;
+    int m = _mes;
 
     if(_dia > dias[_mes-1]) //ejemplo: si el día es mayor a 31 en Enero, cambiar a 01/02
     {
@@ -212,4 +245,43 @@ void Fecha::RestarDias(int cantidadDias)
     }
 
 }
+
+int Fecha::DiferenciaDias(Fecha fechaInicial, Fecha fechaFinal)
+{
+
+    int contador = 0;
+    bool primerFechaMayor = fechaInicial.ToStringOtroFormato() > fechaFinal.ToStringOtroFormato();
+
+    if(primerFechaMayor)
+    {
+
+        Fecha aux = fechaInicial;
+        fechaInicial = fechaFinal;
+        fechaFinal = aux;
+    }
+
+    while(fechaInicial.ToString() != fechaFinal.ToString())
+    {
+
+        fechaInicial.AgregarDia();
+        contador++;
+
+    }
+
+    if(primerFechaMayor)
+    {
+
+        return contador * -1;
+
+
+    }
+    else
+    {
+        return contador;
+    }
+
+}
+
+
+
 
