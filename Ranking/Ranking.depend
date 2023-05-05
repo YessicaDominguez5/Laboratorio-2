@@ -33,7 +33,7 @@
 	"Ranking.h"
 	<iostream >
 
-1682547120 source:c:\users\yeppi\documents\utn\laboratorio-2\ranking\cargar.cpp
+1683254554 source:c:\users\yeppi\documents\utn\laboratorio-2\ranking\cargar.cpp
 	"Cargar.h"
 	<iostream>
 
@@ -50,18 +50,19 @@
 	"Fecha.h"
 	<string>
 
-1682547120 source:c:\users\yeppi\documents\utn\laboratorio-2\ranking\src\pelicula.cpp
+1683254569 source:c:\users\yeppi\documents\utn\laboratorio-2\ranking\src\pelicula.cpp
 	"Pelicula.h"
 	"Fecha.h"
 
-1682547120 source:c:\users\yeppi\documents\utn\laboratorio-2\ranking\src\ranking.cpp
+1683255046 source:c:\users\yeppi\documents\utn\laboratorio-2\ranking\src\ranking.cpp
 	"Ranking.h"
 	<iostream >
+	<iomanip>
 
-1682547120 c:\users\yeppi\documents\utn\laboratorio-2\ranking\include\ranking.h
+1683254909 c:\users\yeppi\documents\utn\laboratorio-2\ranking\include\ranking.h
 	"Pelicula.h"
 
-1682547487 source:c:\users\yeppi\documents\utn\laboratorio-2\ranking\main.cpp
+1683255706 source:c:\users\yeppi\documents\utn\laboratorio-2\ranking\main.cpp
 	<iostream>
 	"Pelicula.h"
 	"Ranking.h"

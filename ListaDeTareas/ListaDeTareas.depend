@@ -36,7 +36,7 @@
 	"Tarea.h"
 	"ListaDeTareas.h"
 
-1682648288 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\main.cpp
+1683247290 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\main.cpp
 	<iostream>
 	"Dificultad.h"
 	"Tarea.h"
@@ -46,30 +46,34 @@
 	<string>
 	<iostream>
 
-1682646490 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\include\tarea.h
+1683246316 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\include\tarea.h
 	<string>
 	<iostream>
 	"Fecha.h"
 	"Dificultad.h"
+	<stdlib.h>
+	"Etiquetas.h"
 
-1682547120 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\include\fecha.h
+1683074708 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\include\fecha.h
 	<string>
 
-1682648288 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\include\listadetareas.h
+1683247290 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\include\listadetareas.h
 	"Tarea.h"
 
 1682547120 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\src\dificultad.cpp
 	"Dificultad.h"
 
-1682547120 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\src\fecha.cpp
+1683074708 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\src\fecha.cpp
 	"Fecha.h"
 	<string>
 
-1682648102 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\src\listadetareas.cpp
+1683247290 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\src\listadetareas.cpp
 	"ListaDeTareas.h"
+	<iomanip>
 
-1682646404 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\src\tarea.cpp
+1683246360 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\src\tarea.cpp
 	"Tarea.h"
+	<string.h>
 
 1682561151 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\funciones.h
 	"ListaDeTareas.h"
@@ -82,4 +86,10 @@
 1682560640 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\include\funciones.h
 	"ListaDeTareas.h"
 	"Tarea.h"
+
+1683147131 source:c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\src\etiquetas.cpp
+	<iostream>
+	"Etiquetas.h"
+
+1683150244 c:\users\yeppi\documents\utn\laboratorio-2\listadetareas\include\etiquetas.h
 

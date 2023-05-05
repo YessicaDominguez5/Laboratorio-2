@@ -19,10 +19,11 @@ class ListaDeTareas
         void TareaHecha(int idHecho);
         void CargarTareas();
         Fecha ObtenerFecha(int i);
-        string GetEtiquetaTarea(int i);
         string ObtenerDificultad(int i);
         string ObtenerEstado(int i);
-
+        void SetEtiquetaDeTarea(string cat, int indiceTarea,int indiceEtiqueta);
+        void GetEtiquetas(int indiceTarea);
+        string GetDescripcionEtiqueta(int indice, int indiceEtiqueta);
 
 
 

@@ -23,7 +23,8 @@ void Pelicula::SetTitulo(string titulo)
 void Pelicula::SetPuntuacion(int puntuacion)
 {
 
-    _puntuacion = puntuacion;
+
+_puntuacion = puntuacion;
 
 }
 void Pelicula::SetFechaPublicacion(Fecha fechaPublicacion)
@@ -52,6 +53,7 @@ Fecha Pelicula::GetFecha()
 
 
 }
+
 
 
 

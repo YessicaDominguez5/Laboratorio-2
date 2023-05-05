@@ -30,10 +30,12 @@ int main()
         cout << "1. CARGAR PELICULAS" << endl;
         cout << "2. PUNTUAR PELICULA" << endl;
         cout << "3. VER RANKING" << endl;
-        cout << "4. SALIR" << endl;
+        cout << "0. SALIR" << endl;
         cout << endl << endl;
         cout << "Ingrese una opcion: ";
         cin >> opcion;
+
+        system("cls");
 
         switch(opcion)
         {
@@ -47,22 +49,43 @@ int main()
            r.Agregar(Pelicula("Twilight", Fecha(8,1,2007),0));
            r.Agregar(Pelicula("Titanic", Fecha(27,6,1997),0));
 
+           cout << "Peliculas cargadas ok" << endl;
+           system("pause");
+           system("cls");
 
             break;
 
 
         case 2:
+           for(int i = 0; i < 5; i++){
 
+            cout << "Puntaje de la pelicula:  " << r.GetTitulo(i) << endl;
+            int puntaje;
+            cin >> puntaje;
+
+            if(puntaje > 0 && puntaje < 6){
+
+
+            r.SetearPuntuacion(i,puntaje);
+
+           } else{
+
+           i=5;
+
+           }
+            }
+
+           system("pause");
+           system("cls");
             break;
 
         case 3:
             r.Mostrar();
+            system("cls");
 
             break;
 
-        case 4:
-
-            cout << "SALIR" << endl;
+        case 0:
 
              break;
 
@@ -74,7 +97,7 @@ int main()
 
 
         }
-    } while(opcion =! 4);
+    } while(opcion != 0);
 
     return 0;
 }

@@ -1,4 +1,5 @@
 #include "Tarea.h"
+#include <string.h>
 
 
 Tarea::Tarea()
@@ -8,7 +9,7 @@ Tarea::Tarea()
     _dificultad = Dificultad();
     _fechaLimite = Fecha();
     _estado = 0;
-    string *_etiquetas = nullptr;
+
 
 
 }
@@ -22,28 +23,27 @@ Tarea::Tarea(int id, string descripcion, Dificultad dificultad, Fecha fecha, boo
     _fechaLimite = fecha;
     _estado = estado;
 
+    system("cls");
+    cout << "Ingrese la cantidad de etiquetas de la tarea " << _descripcion << " :";
 
-    int CantEtiq;
+    int cantEt = 0;
+    cin >> cantEt;
 
-    cout << "Ingrese la cantidad de etiquetas de la tarea: ";
-    cin >> CantEtiq;
-
-    if(CantEtiq <= 10 && CantEtiq > 0)
-    {
-        _etiquetas = new string[CantEtiq];
-
-
-        for(int i = 0; i < CantEtiq ; i++)
+    for(int i = 0; i < cantEt; i++)
         {
-            cout << "Ingrese los nombres de las etiquetas:";
-            cin >>  _etiquetas[i];
+
+            cout << "Ingrese la Etiqueta: ";
+            string cat;
+            cin >> cat;
+
+            _etiqueta[i].SetCategoria(cat);
+
 
         }
 
-        system("pause");
-        system("cls");
 
-}}
+
+}
 int Tarea::GetId()
 {
 
@@ -76,31 +76,55 @@ Fecha Tarea::GetFecha()
 }
 string Tarea::GetEstado()
 {
-    if(_estado){
+    if(_estado)
+    {
         return "Hecha";
-    } else {
+    }
+    else
+    {
         return "Pendiente";
-        }
+    }
 
 }
 
-void Tarea::SetEstado(bool hecha){
+void Tarea::SetEstado(bool hecha)
+{
 
-_estado = hecha;
+    _estado = hecha;
+
+
+}
+void Tarea::SetEtiqueta(string e, int indice)
+{
+
+    _etiqueta[indice].SetCategoria(e);
+
+}
+void Tarea::GetEtiquetas()
+{
+
+    for(int i=0; i<10; i++){
+
+
+
+
+    cout << "Etiqueta " << i+1 << ": " << _etiqueta[i].GetCategoria() << endl;
+
+
+
+
+    }
+
+}
+
+string Tarea::GetDescEtiqueta(int indice){
+
+return _etiqueta[indice].GetCategoria();
 
 
 }
-void Tarea::SetEtiqueta(string* eti){
 
-_etiquetas = eti;
 
-}
-
-string Tarea::GetEtiqueta(){
-
-return *_etiquetas;
-
-}
 
 
 

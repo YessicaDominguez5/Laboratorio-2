@@ -4,6 +4,7 @@
 #include "ListaDeTareas.h"
 
 
+
 using namespace std;
 
 int main()
@@ -19,6 +20,7 @@ int main()
     Tarea t;
     ListaDeTareas l;
     Fecha f;
+    Etiquetas e[10];
 
 
     // cout << t.GetId() << "\t" << t.GetDescripcion() << "\t" << t.GetDificultad().GetDificultad() << "\t" << t.GetFecha().ToString() << "\t" << t.GetEstado();
@@ -32,6 +34,7 @@ int main()
         cout << "3. VISUALIZAR TAREA" << endl;
         cout << "4. MARCAR TAREA COMO HECHA" << endl;
         cout << "5. DIAS PARA EL VENCIMIENTO" << endl;
+        cout << "6. MOSTRAR TAREAS POR ETIQUETA" << endl;
         cout << "0. SALIR" << endl;
 
         cout << "Ingrese una opcion: ";
@@ -45,6 +48,7 @@ int main()
 
         case 1:
         {
+
 
             l.CargarTareas();
 
@@ -88,6 +92,7 @@ int main()
                         cout << "El nivel de dificultad es: " << l.ObtenerDificultad(i) << endl;
                         cout << "La fecha limite es: " << l.ObtenerFecha(i).ToString() << endl;
                         cout << "Estado: " << l.ObtenerEstado(i) << endl;
+                        l.GetEtiquetas(i);
 
                         system("pause");
                         system("cls");
@@ -116,8 +121,6 @@ int main()
 
                 }
 
-
-
             }
 
             system("pause");
@@ -141,15 +144,35 @@ int main()
 
             }
 
-
-
-
-
-
             system("pause");
             break;
         }
+        case 6:{
 
+            cout << "Ingrese etiqueta: ";
+            string eti;
+            cin >> eti;
+
+            for(int i = 0; i < 10; i++){
+
+                    for(int j= 0; j <10; j++){
+
+                if(eti == l.GetDescripcionEtiqueta(i, j)){
+
+                    cout << l.ObtenerDescripcion(i)<< endl;
+
+                }
+
+
+
+                    }
+
+
+            }
+            system("pause");
+
+            break;
+        }
 
         case 0:
         {
