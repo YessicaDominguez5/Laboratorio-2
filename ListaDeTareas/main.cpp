@@ -1,7 +1,8 @@
 #include <iostream>
 #include "Dificultad.h"
 #include "Tarea.h"
-#include "ListaDeTareas.h"
+#include "funciones.h"
+//#include "ListaDeTareas.h"
 
 
 
@@ -9,24 +10,26 @@ using namespace std;
 
 int main()
 {
+    Tarea reg(11,"Aprender Archivos",3,Fecha(7,5,2023),0);
+    MostrarTarea(reg);
     // Dificultad d;
 
     //prueba Dificultad
 
     /*  cout << d.GetDificultad() << endl;
       d.SetDificultad(4);
-      cout << d.GetDificultad() << endl;*/
+      cout << d.GetDificultad() << endl;*///no va
 
-    Tarea t;
+   /* Tarea t;
     ListaDeTareas l;
     Fecha f;
-    Etiquetas e[10];
+    Etiquetas e[10];*/ //va
 
 
-    // cout << t.GetId() << "\t" << t.GetDescripcion() << "\t" << t.GetDificultad().GetDificultad() << "\t" << t.GetFecha().ToString() << "\t" << t.GetEstado();
+    // cout << t.GetId() << "\t" << t.GetDescripcion() << "\t" << t.GetDificultad().GetDificultad() << "\t" << t.GetFecha().ToString() << "\t" << t.GetEstado(); no va
 
     int opcion;
-    do
+   /* do
     {
         system("cls");
         cout << "1. CARGAR TAREAS" << endl;
@@ -189,7 +192,7 @@ int main()
 
 
     }
-    while(opcion != 0);
+    while(opcion != 0);*/ //va
 
 
 

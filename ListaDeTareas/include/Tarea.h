@@ -6,6 +6,7 @@
 #include "Dificultad.h"
 #include <stdlib.h>
 #include "Etiquetas.h"
+#include <cstring>
 using namespace std;
 
 
@@ -13,7 +14,8 @@ class Tarea
 {
 private:
     int _id;
-    string _descripcion;
+    //string _descripcion;
+    char _descripcion[50]; //necesito registros de longitud fija para guardarlo en archivos
     Dificultad _dificultad;
     Fecha _fechaLimite;
     bool _estado;
@@ -32,6 +34,7 @@ public:
     void SetEtiqueta(string e, int indice);
     void GetEtiquetas();
     string GetDescEtiqueta(int indice);
+    void SetDescripcion(string descripcion);
 
 
 

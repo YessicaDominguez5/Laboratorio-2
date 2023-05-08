@@ -1,11 +1,13 @@
 #include "Tarea.h"
 #include <string.h>
+#include "funciones.h"
 
 
 Tarea::Tarea()
 {
     _id = 0;
-    _descripcion = "";
+   // _descripcion = "";
+   strcpy(_descripcion,"");
     _dificultad = Dificultad();
     _fechaLimite = Fecha();
     _estado = 0;
@@ -18,7 +20,8 @@ Tarea::Tarea(int id, string descripcion, Dificultad dificultad, Fecha fecha, boo
 {
 
     _id = id;
-    _descripcion = descripcion;
+    //_descripcion = descripcion;
+    strcpy(_descripcion,descripcion.c_str()); // el c_str() transforma un string a un vector de char
     _dificultad = dificultad;
     _fechaLimite = fecha;
     _estado = estado;
@@ -52,10 +55,14 @@ int Tarea::GetId()
 }
 string Tarea::GetDescripcion()
 {
+    string descripcion;
+
+    descripcion = _descripcion;
 
 
-    return _descripcion;
+    return descripcion;
 
+    //A un vector de char no le puedo asignar un string, pero a un string le puedo asignar un vector de char
 
 }
 
@@ -123,6 +130,13 @@ return _etiqueta[indice].GetCategoria();
 
 
 }
+ void Tarea::SetDescripcion(string descripcion){
+
+ strcpy(_descripcion, descripcion.c_str());
+
+
+
+ }
 
 
 
