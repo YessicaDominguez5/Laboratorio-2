@@ -3,6 +3,7 @@
 #include "Tarea.h"
 #include "funciones.h"
 //#include "ListaDeTareas.h"
+#include <cstdio> // para archivos
 
 
 
