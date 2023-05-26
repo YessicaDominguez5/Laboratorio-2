@@ -411,9 +411,13 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1685064924 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\main.cpp
+1685132533 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\main.cpp
+	<iostream>
 	<SFML/Graphics.hpp>
+	<ctime>
+	<stdlib.h>
 	"Personaje.h"
+	"Ring.h"
 
 1685045278 c:\users\juaniyeppi\documents\laboratorio-2\juego1\sfml\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -827,6 +831,12 @@
 1685068968 c:\users\juaniyeppi\documents\laboratorio-2\juego1\personaje.h
 	<SFML\Graphics.hpp>
 
-1685073521 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\personaje.cpp
+1685123082 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\personaje.cpp
 	"Personaje.h"
+
+1685132565 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\ring.cpp
+	"Ring.h"
+
+1685132533 c:\users\juaniyeppi\documents\laboratorio-2\juego1\ring.h
+	<SFML\Graphics.hpp>
 

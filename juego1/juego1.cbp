@@ -40,8 +40,12 @@
 			<Add library="libsfml-system-d.a" />
 			<Add directory="SFML/lib" />
 		</Linker>
+		<Unit filename="Collisionable.cpp" />
+		<Unit filename="Collisionable.h" />
 		<Unit filename="Personaje.cpp" />
 		<Unit filename="Personaje.h" />
+		<Unit filename="Ring.cpp" />
+		<Unit filename="Ring.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />

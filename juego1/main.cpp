@@ -1,12 +1,18 @@
 
-//#include <iostream>
+#include <iostream>
 #include <SFML/Graphics.hpp>
+#include <ctime>
+#include <stdlib.h>
 #include "Personaje.h"
+#include "Ring.h"
+
+
 using namespace std;
 using namespace sf;
 
 int main()
 {
+    /*std::*/srand((unsigned)/*std::*/time(0));
     /*sf::*/RenderWindow window(sf::VideoMode(800,600),"Mi primer Juego");//inicialización ventana
     window.setFramerateLimit(60);
     /*sf::*///Sprite personaje;
@@ -15,6 +21,9 @@ int main()
    // personaje.setTexture(personaje_text);// Le agrega la imagen al sprite
    // float velocity = 4;
    Personaje sonic;
+   Ring anillo;
+
+   anillo.respawn();
 
     while(window.isOpen()){ //game loop(update del juego)
 
@@ -93,9 +102,11 @@ int main()
        window.clear();
         //DRAW dibuja el comando(si el cmd indica mirar a la izquierda, el personaje tiene que mirar a la izquierda)
         window.draw(sonic);
+        window.draw(anillo);
 
        window.display(); // Display Flip
 
     } //Liberacion del juego
     return 0;
 }
+

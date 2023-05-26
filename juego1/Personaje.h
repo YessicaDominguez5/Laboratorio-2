@@ -1,9 +1,10 @@
 #ifndef PERSONAJE_H
 #define PERSONAJE_H
 #include <SFML\Graphics.hpp>
+#include "Collisionable.h"
 using namespace sf;
 
-class Personaje: public/*sf::*/Drawable
+class Personaje: public/*sf::*/Drawable, public Collisionable
 {
     private:
     /*sf::*/ Sprite _sprite;
@@ -17,6 +18,7 @@ class Personaje: public/*sf::*/Drawable
         //un objeto que es dibujable
         //constante porque no modifica el estado actual del personaje.
         //Override porque esta sobreescribiendo
+        /*sf::*/FloatRect getBounds()const override;//para colisiones
 
 };
 

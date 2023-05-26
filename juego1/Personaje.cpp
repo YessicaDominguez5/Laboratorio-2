@@ -98,7 +98,8 @@ void Personaje::update(){
            //_sprite.setPosition(800 - _sprite.getGlobalBounds().width, _sprite.getPosition().y);
             //ponerlo en la posición de x que es 800(ancho de pantalla) - el ancho de la foto del personaje
 
-            _sprite.setPosition(800 - _sprite.getOrigin().x, _sprite.getPosition().y);
+            _sprite.setPosition(800 - (_sprite.getGlobalBounds().width -_sprite.getOrigin().x), _sprite.getPosition().y);
+            //diferencia entre el ancho y el origin
 
 
 
@@ -112,7 +113,7 @@ void Personaje::update(){
            // _sprite.setPosition(_sprite.getPosition().x, 600 - _sprite.getGlobalBounds().height);
             //la posición de y es 600(alto de pantalla) - el alto de la foto del personaje
 
-            _sprite.setPosition(_sprite.getPosition().x, 600 - _sprite.getOrigin().y);
+            _sprite.setPosition(_sprite.getPosition().x, 600 +(_sprite.getGlobalBounds().height -_sprite.getOrigin().y)); //600+0
 
             //_velocity.y = -_velocity.y;// para que rebote al otro lado cuando choca con la pared
 
@@ -124,5 +125,12 @@ void Personaje::update(){
 
  target.draw(_sprite, states);
  //se va a dibujar donde esta el target
+
+ }
+
+  /*sf::*/FloatRect Personaje::getBounds()const{
+
+ //colisiones
+ return _sprite.getGlobalBounds();
 
  }
