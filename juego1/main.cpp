@@ -89,9 +89,10 @@ int main()
 
         //}
         //update Actualiza los estados del juego
+        sonic.update();
        window.clear();
         //DRAW dibuja el comando(si el cmd indica mirar a la izquierda, el personaje tiene que mirar a la izquierda)
-        window.draw(personaje);
+        window.draw(sonic);
 
        window.display(); // Display Flip
 
