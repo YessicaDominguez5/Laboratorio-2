@@ -44,6 +44,8 @@
 		<Unit filename="Collisionable.h" />
 		<Unit filename="Personaje.cpp" />
 		<Unit filename="Personaje.h" />
+		<Unit filename="Power.cpp" />
+		<Unit filename="Power.h" />
 		<Unit filename="Ring.cpp" />
 		<Unit filename="Ring.h" />
 		<Unit filename="main.cpp" />

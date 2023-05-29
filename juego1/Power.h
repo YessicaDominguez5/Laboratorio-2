@@ -1,12 +1,12 @@
-#ifndef RING_H
-#define RING_H
+#ifndef POWER_H
+#define POWER_H
 #include <SFML\Graphics.hpp>
 #include "Collisionable.h"
 using namespace sf;
 using namespace std;
 
 
-class Ring:public /*sf::*/Drawable, public Collisionable
+class Power:public /*sf::*/Drawable, public Collisionable
 {
 private:
     /*sf::*/
@@ -14,7 +14,7 @@ private:
     /*sf::*/Texture _texture;
 public:
 
-    Ring();
+    Power();
     void update();
     void draw(/*sf::*/RenderTarget& target, /*sf::*/RenderStates states)const override;
     void respawn();//colisiones
@@ -22,4 +22,4 @@ public:
 
 };
 
-#endif // RING_H
+#endif // POWER_H

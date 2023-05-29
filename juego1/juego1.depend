@@ -411,7 +411,7 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1685132533 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\main.cpp
+1685310214 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\main.cpp
 	<iostream>
 	<SFML/Graphics.hpp>
 	<ctime>
@@ -828,15 +828,23 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1685068968 c:\users\juaniyeppi\documents\laboratorio-2\juego1\personaje.h
+1685134995 c:\users\juaniyeppi\documents\laboratorio-2\juego1\personaje.h
 	<SFML\Graphics.hpp>
+	"Collisionable.h"
 
-1685123082 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\personaje.cpp
+1685134996 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\personaje.cpp
 	"Personaje.h"
 
-1685132565 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\ring.cpp
+1685308797 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\ring.cpp
 	"Ring.h"
 
-1685132533 c:\users\juaniyeppi\documents\laboratorio-2\juego1\ring.h
+1685308797 c:\users\juaniyeppi\documents\laboratorio-2\juego1\ring.h
 	<SFML\Graphics.hpp>
+	"Collisionable.h"
+
+1685133871 c:\users\juaniyeppi\documents\laboratorio-2\juego1\collisionable.h
+	<SFML/Graphics.hpp>
+
+1685308080 source:c:\users\juaniyeppi\documents\laboratorio-2\juego1\collisionable.cpp
+	"Collisionable.h"
 

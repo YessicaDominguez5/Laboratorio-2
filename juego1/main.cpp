@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "Personaje.h"
 #include "Ring.h"
+#include "Power.h"
 
 
 using namespace std;
@@ -15,6 +16,13 @@ int main()
     /*std::*/srand((unsigned)/*std::*/time(0));
     /*sf::*/RenderWindow window(sf::VideoMode(800,600),"Mi primer Juego");//inicialización ventana
     window.setFramerateLimit(60);
+    //imagen sprite 50 66
+
+    /*sf::*/Font font;
+    font.loadFromFile("Magicskoolbus.ttf"); //Googlear Dafont
+
+    /*sf::*/Text text;
+    text.setFont(font);
     /*sf::*///Sprite personaje;
     /*sf::*///Texture personaje_text;
    // personaje_text.loadFromFile("sonic.png"); // carga la imagen
@@ -24,6 +32,10 @@ int main()
    Ring anillo;
 
    anillo.respawn();
+
+   Power power;
+
+   int puntos = 0;
 
     while(window.isOpen()){ //game loop(update del juego)
 
@@ -99,10 +111,20 @@ int main()
         //}
         //update Actualiza los estados del juego
         sonic.update();
+
+        if(sonic.isCollision(anillo)){
+
+                anillo.respawn();
+                puntos++;
+
+        } //colisiones
+
+        text.setString(/*std::*/to_string(puntos));
        window.clear();
         //DRAW dibuja el comando(si el cmd indica mirar a la izquierda, el personaje tiene que mirar a la izquierda)
         window.draw(sonic);
         window.draw(anillo);
+        window.draw(text);
 
        window.display(); // Display Flip
 
