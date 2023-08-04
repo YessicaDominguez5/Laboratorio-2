@@ -34,7 +34,7 @@ int main()
 {
     int opcion;
     int MatMaterias[3][CantMaterias] = {};
-    int legajo, mes = 0, dia = 0, CantidadHoras = 0, NroMateria = 0, Acu1 = 0, Acu2 = 0, Acu3 = 0, Acu4 = 0, Acu5 = 0, MatMarzo[5][31] = {};
+    int legajo, mes = 0, dia = 0, CantidadHoras = 0, NroMateria = 0, Acu1 = 0, Acu2 = 0, Acu3 = 0, Acu4 = 0, Acu5 = 0, MatMarzo[5][31] = {}, ContIngresosMarzo = 0;
     do
     {
         cout << "Ingrese que opcion desea seleccionar: " << endl << endl;
@@ -96,7 +96,7 @@ int main()
                 if(mes == 3)
                 {
 
-                    MatMarzo[NroMateria - 1][dia - 1] += 1;
+                    MatMarzo[NroMateria - 1][dia - 1]++;
 
                 }
 
@@ -312,9 +312,11 @@ int main()
             for(int i = 0; i < 31; i++)
             {
 
-                cout<< "Dia " << i + 1 << ":" << MatMarzo[0][i];
+                cout<< " Dia " << i + 1 << ": " << MatMarzo[0][i];
 
             }
+
+            system("pause");
 
             for(int x = 0; x < 11; x++)
             {
@@ -327,8 +329,9 @@ int main()
             for(int i = 0; i < 31; i++)
             {
 
-                cout<< "Dia " << i + 1 << ":" << MatMarzo[1][i];
+                cout<< " Dia " << i + 1 << ": " << MatMarzo[1][i];
             }
+            system("pause");
 
 
             for(int x = 0; x < 10; x++)
@@ -342,9 +345,9 @@ int main()
             for(int i = 0; i < 31; i++)
             {
 
-                cout<< "Dia " << i + 1 << ":" << MatMarzo[2][i];
+                cout<< " Dia " << i + 1 << ": " << MatMarzo[2][i];
             }
-
+            system("pause");
             for(int x = 0; x < 39; x++)
             {
 
@@ -357,8 +360,9 @@ int main()
             for(int i = 0; i < 31; i++)
             {
 
-                cout<< "Dia " << i + 1 << ":" << MatMarzo[3][i];
+                cout<< " Dia " << i + 1 << ": " << MatMarzo[3][i];
             }
+            system("pause");
             for(int x = 0; x < 11; x++)
             {
 
@@ -370,7 +374,7 @@ int main()
             for(int i = 0; i < 31; i++)
             {
 
-                cout<< "Dia " << i + 1 << ":" << MatMarzo[4][i];
+                cout << " Dia " << i + 1 << ": " << MatMarzo[4][i];
             }
 
             system("pause");
@@ -380,6 +384,10 @@ int main()
             break;
 
         }
+        default:
+            cout << "Opcion incorrecta." << endl;
+             system("pause");
+            break;
 
 
         } //fin switch opcion
