@@ -34,6 +34,8 @@ int main()
    anillo.respawn();
 
    Power power;
+   int timer = 60*5;
+   power.respawn();
 
    int puntos = 0;
 
@@ -112,12 +114,27 @@ int main()
         //update Actualiza los estados del juego
         sonic.update();
 
+        if(timer > 0){
+
+            timer--;
+
+        }
+
         if(sonic.isCollision(anillo)){
 
                 anillo.respawn();
                 puntos++;
 
         } //colisiones
+        if(timer == 0 && sonic.isCollision(power)){
+            //si timer esta en 0 el diamante esta activo
+
+            sonic.addVelocity(1);
+            timer = 60*5;
+            power.respawn(); // cada 5" tiene q aparecer en otro lado
+
+        }
+
 
         text.setString(/*std::*/to_string(puntos));
        window.clear();
@@ -125,6 +142,12 @@ int main()
         window.draw(sonic);
         window.draw(anillo);
         window.draw(text);
+
+        if(timer == 0){
+
+            window.draw(power);//dibujar el diamante
+
+        }
 
        window.display(); // Display Flip
 

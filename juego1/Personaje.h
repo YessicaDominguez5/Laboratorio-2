@@ -2,6 +2,7 @@
 #define PERSONAJE_H
 #include <SFML\Graphics.hpp>
 #include "Collisionable.h"
+#include "Power.h"
 using namespace sf;
 
 class Personaje: public/*sf::*/Drawable, public Collisionable
@@ -19,6 +20,7 @@ class Personaje: public/*sf::*/Drawable, public Collisionable
         //constante porque no modifica el estado actual del personaje.
         //Override porque esta sobreescribiendo
         /*sf::*/FloatRect getBounds()const override;//para colisiones
+        void addVelocity(float velocity);
 
 };
 

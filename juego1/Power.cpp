@@ -16,7 +16,7 @@ void Power::draw(/*sf::*/RenderTarget& target, /*sf::*/RenderStates states)const
 
 
  }//colisiones
- /*sf::*/FloatRect Ring::getBounds()const{
+ /*sf::*/FloatRect Power::getBounds()const{
 
 
  return _sprite.getGlobalBounds();

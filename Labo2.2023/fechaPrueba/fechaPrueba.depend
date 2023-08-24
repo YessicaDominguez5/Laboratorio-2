@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1692838055 source:c:\users\yeppi\documents\utn\labo2.2023\fechaprueba\main.cpp
+	<iostream>
+	"Fecha.h"
+
+1692845194 c:\users\yeppi\documents\utn\labo2.2023\fechaprueba\include\fecha.h
+	<string>
+
+1692845194 source:c:\users\yeppi\documents\utn\labo2.2023\fechaprueba\src\fecha.cpp
+	"Fecha.h"
+	<ctime>
+
+1692831432 source:c:\users\yeppi\documents\utn\labo2.2023\fechaprueba\funciones.cpp
+	"Funciones.h"
+
+1692831722 c:\users\yeppi\documents\utn\labo2.2023\fechaprueba\funciones.h
+

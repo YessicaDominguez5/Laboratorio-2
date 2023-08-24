@@ -134,3 +134,9 @@ void Personaje::update(){
  return _sprite.getGlobalBounds();
 
  }
+
+  void Personaje::addVelocity(float velocity){
+
+  _velocity+= {velocity,velocity};
+
+  }

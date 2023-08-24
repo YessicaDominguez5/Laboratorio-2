@@ -2,6 +2,7 @@
 #define RING_H
 #include <SFML\Graphics.hpp>
 #include "Collisionable.h"
+#include "Power.h"
 using namespace sf;
 using namespace std;
 
