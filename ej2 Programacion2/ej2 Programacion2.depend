@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1683074708 source:c:\users\yeppi\documents\utn\laboratorio-2\ej2 programacion2\fecha.cpp
+	"Fecha.h"
+	<string>
+
+1683074708 c:\users\yeppi\documents\utn\laboratorio-2\ej2 programacion2\fecha.h
+	<string>
+
