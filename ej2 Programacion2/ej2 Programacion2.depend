@@ -6,3 +6,17 @@
 1683074708 c:\users\yeppi\documents\utn\laboratorio-2\ej2 programacion2\fecha.h
 	<string>
 
+1693705075 source:c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\ej2 programacion2\fecha.cpp
+	"Fecha.h"
+	<string>
+
+1693705075 c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\ej2 programacion2\fecha.h
+	<string>
+
+1693708545 source:c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\ej2 programacion2\main.cpp
+	<iostream>
+	"Fecha.h"
+	<cstdlib>
+	<cstring>
+	<clocale>
+
