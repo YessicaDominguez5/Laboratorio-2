@@ -21,20 +21,20 @@ class Empleados
 private:
     char _dni[9];
     char _nombre[15];
-    char _email[50];
+    char _email[30];
     Fecha _fechaDeNacimiento;
     int _cargo;
 
 public:
-   // Empleados();
-   /* Empleados(char *dni,char *nombre, char *email,int cargo)
-    {
-        strcpy(_dni,dni);
-        strcpy(_nombre,nombre);
-        strcpy(_email, email);
-        _cargo = cargo;
+   Empleados()
+   {
 
-    }*/
+    strcpy(_dni,"111111");
+    strcpy(_nombre,"Sin nombre");
+    strcpy(_email,"...@....com");
+
+    };
+
     void setDni(const char *d)
     {
         strcpy(_dni,d);
@@ -47,7 +47,9 @@ public:
     {
         strcpy(_email,e);
     }
-    void setFechaDeNacimiento(Fecha f);
+    void setFechaDeNacimiento(Fecha f){
+    _fechaDeNacimiento = f;
+    }
     void setCargo(int c)
     {
         _cargo = c;
@@ -72,27 +74,28 @@ public:
     {
         return _cargo;
     }
+    void MostrarDni();
+    void MostrarNombre();
+    void MostrarMail();
+    void MostrarCargo();
+    void MostrarFechaDeNacimiento();
 
 };
 
 void Cargar(Empleados *vecEmpleados,int cantEmp);
-void Mostrar(Empleados *vectorEmpleados, int cantEmp);
-
+void cargarCadena(char *palabra, int tamano);
 int main()
 {
     setlocale(LC_ALL,"spanish");
 
-    char nom[15] = "sin nombre";
-    char dni[9] = "11111111";
-    char mail[50] = "....@....com";
 
     const int cantidadDeEmpleados = 2;
-    Empleados vecEmpleados[2];
+    Empleados vecEmpleados[cantidadDeEmpleados];
 
     char opcion = 0;
     do
     {
-
+        cout << endl << endl;
         cout << "***** MENÚ *****" << endl;
         cout << "1. Cargar Empleados" << endl;
         cout << "2. Mostrar Empleados" << endl;
@@ -102,31 +105,47 @@ int main()
 
         cout << "Marque una opción: " << endl;
         cin >> opcion;
+        system("cls");
 
         switch(opcion)
         {
+
         case '1':
+            {
 
 
             Cargar(vecEmpleados, cantidadDeEmpleados);
 
+            }
             break;
 
         case '2':
+            {
 
-            Mostrar(vecEmpleados, cantidadDeEmpleados);
+            for(int i = 0; i < cantidadDeEmpleados; i++){
+            cout << "Empleado n°" << i+1 << ": ";
+            vecEmpleados[i].MostrarDni();
+            vecEmpleados[i].MostrarNombre();
+            vecEmpleados[i].MostrarMail();
+            };
 
+            }
             break;
 
         case '3':
+            {
+
 
             opcion = 0;
+            }
             break;
 
         default:
+            {
 
             cout << "Opción incorrecta" << endl;
 
+            }
             break;
 
 
@@ -139,11 +158,10 @@ int main()
 
     return 0;
 }
-
 void Cargar(Empleados *vecEmpleados,int cantEmp)
 {
     Empleados e1;
-    char dni[9], nombre[15], email[50], letra;
+    char dni[9], nombre[15], email[30], letra;
     int cargo = 0, d,m,a;
     Fecha fDeNac;
 
@@ -156,72 +174,59 @@ void Cargar(Empleados *vecEmpleados,int cantEmp)
 
         cout << "Dni: ";
 
-        for(int y = 0; y < 9; i++)
-        {
-            cin >> letra;
+      char dniCargado[9];
+    cargarCadena(dni,9);
 
-            dni[y] = letra;
-        }
+      strcpy(dniCargado,dni);
 
-
-        e1.setDni(dni);
-
-        vecEmpleados[i].setDni(e1.getDni());
+        vecEmpleados[i].setDni(dniCargado);
 
 
-        cout << "Nombre: ";
+        cout << endl <<  "Nombre: ";
 
-        for(int j = 0; j < 15; j++)
-        {
-            cin >> letra;
+        char nombreCargado[15];
+        cargarCadena(nombre, 15);
+        strcpy(nombreCargado,nombre);
 
-            nombre[j] = letra;
+        vecEmpleados[i].setNombre(nombreCargado);
 
-        }
-        e1.setNombre(nombre);
-        vecEmpleados[i].setNombre(e1.getNombre());
+        cout << endl << "Email: ";
 
-        cout << "Email: ";
+        char emailCargado[30];
+        cargarCadena(email,30);
 
-        for(int e = 0; e < 50; e++)
-        {
-            cin >> letra;
+      strcpy(emailCargado, email);
 
-            email[e] = letra;
+        vecEmpleados[i].setEmail(emailCargado);
 
-        }
-        e1.setEmail(email);
-        vecEmpleados[i].setEmail(e1.getEmail());
 
-        cout << "Cargo(1 2 3): " << endl;
+        cout << endl << "Cargo(1 2 3): " << endl;
 
         cin >> cargo;
 
 
-        if(cargo < 1 || cargo > 3)
+        if(cargo > 0 && cargo < 4)
         {
-            e1.setCargo(cargo);
-            vecEmpleados[i].setCargo(e1.getCargo());
+            vecEmpleados[i].setCargo(cargo);
 
 
         }
         else
         {
             cargo = 0;
-            e1.setCargo(cargo);
-            vecEmpleados[i].setCargo(e1.getCargo());
+            vecEmpleados[i].setCargo(cargo);
 
         }
 
-        cout << "Fecha de Nacimiento: ";
+        cout << endl << "Fecha de Nacimiento: " << endl;
+        cout << "Día: ";
         cin >> d;
-        cout << "/";
+        cout << endl << "Mes: ";
         cin >> m;
-        cout << "/";
+        cout << endl << "Año: ";
         cin >> a;
 
         Fecha f(d,m,a);
-
         vecEmpleados[i].setFechaDeNacimiento(f);
 
 
@@ -229,69 +234,74 @@ void Cargar(Empleados *vecEmpleados,int cantEmp)
 
 }
 
-void Mostrar(Empleados *vectorEmpleados, int cantEmp)
-{
-    char nombreCargo1[7] = "Junior";
-    char nombreCargo2[7] = "Senior";
-    char nombreCargo3[8] = "Trainee";
-    char nombreCargo0[10] = "Sin cargo";
+void cargarCadena(char* palabra, int tamano){
 
-    cout << "Información del personal" << endl;
+    int i=0;
 
-    for(int i = 0; i < cantEmp; i++)
-    {
-        cout << "Dni: " << vectorEmpleados[i].getDni() << endl;
-        cout << "Nombre: " << vectorEmpleados[i].getNombre() << endl;
-        cout << "Email: " << vectorEmpleados[i].getEmail() << endl;
-        cout << "Cargo: ";
-        if(vectorEmpleados[i].getCargo() == 1)
-        {
-            for(int i; i < 7; i++)
-            {
-                cout << nombreCargo1[i];
-            }
-        }
-        else if(vectorEmpleados[i].getCargo() == 2)
-        {
-            for(int i; i < 7; i++)
-            {
-                cout << nombreCargo2[i];
-            }
+    fflush(stdin);
+
+    for (i=0; i<tamano; i++){
+
+        palabra[i]=cin.get();
+
+        if (palabra[i]=='\n'){
+
+            break;
 
         }
-        else if(vectorEmpleados[i].getCargo() == 3)
-        {
-            for(int i; i < 8; i++)
-            {
-                cout << nombreCargo3[i];
-            }
-
-        }
-        else
-        {
-            for(int i; i < 10; i++)
-            {
-                cout << nombreCargo0[i];
-            }
-
-        }
-
-        cout << endl;
-        cout << "Fecha de Nacimiento: " << vectorEmpleados[i].getFechaDeNacimiento().GetDia() << "/" << vectorEmpleados[i].getFechaDeNacimiento().GetMes()<< "/" << vectorEmpleados[i].getFechaDeNacimiento().GetAnio();
-
-
-
     }
 
+    palabra[i]='\0';
 
-
-
+    fflush(stdin);
 }
 
 
+    void Empleados::MostrarDni()
+    {
+        cout << endl;
 
+        for(int i = 0; i < 9; i++)
+        {
+             cout << _dni[i];
 
+        if (_dni[i]=='\0'){
 
+            break;
+        }
 
+        }
+        cout << endl;
+    }
 
+    void Empleados::MostrarNombre()
+    {
 
+        for(int i = 0; i < 15; i++)
+        {
+             cout << _nombre[i];
+
+        if (_nombre[i]=='\0'){
+
+            break;
+        }
+        }
+        cout << endl;
+
+    }
+
+    void Empleados::MostrarMail()
+    {
+
+        for(int i = 0; i < 30; i++)
+        {
+             cout << _email[i];
+
+        if (_email[i]=='\0'){
+
+            break;
+        }
+
+    }
+    cout << endl;
+    }
