@@ -78,7 +78,7 @@ public:
     void MostrarNombre();
     void MostrarMail();
     void MostrarCargo();
-    void MostrarFechaDeNacimiento();
+
 
 };
 
@@ -127,6 +127,8 @@ int main()
             vecEmpleados[i].MostrarDni();
             vecEmpleados[i].MostrarNombre();
             vecEmpleados[i].MostrarMail();
+            vecEmpleados[i].MostrarCargo();
+            cout << vecEmpleados[i].getFechaDeNacimiento().ToString() << endl << endl;
             };
 
             }
@@ -225,6 +227,7 @@ void Cargar(Empleados *vecEmpleados,int cantEmp)
         cin >> m;
         cout << endl << "Año: ";
         cin >> a;
+        cout << endl;
 
         Fecha f(d,m,a);
         vecEmpleados[i].setFechaDeNacimiento(f);
@@ -305,3 +308,31 @@ void cargarCadena(char* palabra, int tamano){
     }
     cout << endl;
     }
+
+    void Empleados::MostrarCargo()
+    {
+        if(_cargo == 1)
+        {
+
+            cout << "Trainee" << endl;
+
+
+        }else if(_cargo == 2)
+        {
+
+            cout << "Junior" << endl;
+
+        }else if(_cargo == 3)
+        {
+
+            cout << "Senior" << endl;
+
+        }else{
+
+        cout << "Sin cargo" << endl;
+        }
+    }
+
+
+
+
