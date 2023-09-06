@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1693954124 source:c:\users\yeppi\documents\utn\laboratorio-2\archivos\fecha.cpp
+	"Fecha.h"
+	<string>
+
+1693945040 c:\users\yeppi\documents\utn\laboratorio-2\archivos\fecha.h
+	<string>
+
+1693967596 source:c:\users\yeppi\documents\utn\laboratorio-2\archivos\main.cpp
+	<iostream>
+	<cstdlib>
+	<cstring>
+	<cstdio>
+	"Fecha.h"
+

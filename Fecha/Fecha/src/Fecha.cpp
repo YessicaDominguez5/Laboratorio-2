@@ -62,6 +62,21 @@ Fecha::Fecha(int dia, int mes, int anio)
 
     }
 }
+void Fecha::SetDia(int d)
+{
+    _dia = d;
+
+}
+void Fecha::SetMes(int m)
+{
+    _mes = m;
+
+}
+void Fecha::SetAnio(int a)
+{
+    _anio = a;
+
+}
 
 int Fecha::GetDia()
 {

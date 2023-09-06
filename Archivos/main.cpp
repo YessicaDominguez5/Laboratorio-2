@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Fecha.h"
 #include <cstdlib>
 #include <cstring>
-#include <clocale>
+#include <cstdio> //para archivos
+#include "Fecha.h"
 
 using namespace std;
 
@@ -157,7 +157,8 @@ void Persona::Mostrar()
 
 
 }
-class Alumno:public Persona{
+class Alumno:public Persona
+{
 
 private:
     int _legajo;
@@ -180,11 +181,12 @@ public:
     void SetTituloSecundario(const char *t)
     {
 
-       strcpy(_tituloSecundario,t);
+        strcpy(_tituloSecundario,t);
 
     }
-    int GetLegajo(){
-    return _legajo;
+    int GetLegajo()
+    {
+        return _legajo;
     }
     int GetCodigoDeCarrera()
     {
@@ -196,61 +198,169 @@ public:
         return _tituloSecundario;
     }
 
-    void Cargar(){
+    void Cargar()
+    {
 
         Persona::Cargar();
 
 
-    cout << "Legajo: ";
-    cin >> _legajo;
-    cout << "Código de carrera: ";
-    cin >> _codigoCarrera;
-    cout << "Título Secundario: ";
-    cargarCadena(_tituloSecundario,19);
-    cout << endl;
+        cout << "Legajo: ";
+        cin >> _legajo;
+        cout << "Código de carrera: ";
+        cin >> _codigoCarrera;
+        cout << "Título Secundario: ";
+        cargarCadena(_tituloSecundario,19);
+        cout << endl;
 
     }
     void Mostrar()
     {
         Persona::Mostrar();
 
-    cout << "Legajo: ";
-    cout << _legajo;
-    cout << "Código de carrera: ";
-    cout << _codigoCarrera;
-    cout << "Título Secundario: ";
-    cout << _tituloSecundario;
-    cout << endl;
+        cout << "Legajo: ";
+        cout << _legajo;
+        cout << "Código de carrera: ";
+        cout << _codigoCarrera;
+        cout << "Título Secundario: ";
+        cout << _tituloSecundario;
+        cout << endl;
 
     }
-    void CambiarDni(int dni){
+    void CambiarDni(int dni)
+    {
 
-    _dni = dni; //Como persona esta protected deja a las clases derivadas acceder
+        _dni = dni; //Como persona esta protected deja a las clases derivadas acceder
     }
 
 
 };
+bool GrabarRegistro()
+{
+    Alumno reg;
+    FILE *pAlu;
+    pAlu = fopen("alumnos.dat","ab");
+
+    if(pAlu == NULL)
+    {
+
+        return false;
+
+    }
+    cout << "INGRESAR LOS VALORES DEL REGISTRO: " << endl;
+    reg.Cargar();
+    bool escribio = fwrite(&reg,sizeof reg,1,pAlu);
+    fclose(pAlu);
+    return escribio;
+}
+
+bool MostrarRegistro()
+{
+    Alumno reg;
+    FILE *pAlu;
+
+    pAlu = fopen("alumnos.dat", "rb");
+    if(pAlu == NULL)
+    {
+        return false;
+    }
+    while(fread(&reg,sizeof reg,1,pAlu)==1)
+    {
+        reg.Mostrar();
+        cout << endl;
+    }
+    fclose(pAlu);
+    return true;
+
+
+}
 
 
 int main()
 {
-    setlocale(LC_ALL,"spanish");
-   //Persona aux;
-  // Alumno aux;
+    /*Alumno reg;
+    FILE *pAlu;
+    pAlu = fopen("alumnos.dat","rb");
+    if(pAlu == NULL)
+    {
+        cout << "ERROR DE ARCHIVO" << endl;
+        system("pause");
 
-   // aux.Cargar();
-   // aux.Mostrar();
+        return -1;
 
-   // aux.CambiarDni(5555);
-   // aux.Mostrar();
+    }
+    //reg.Cargar();
+    //fwrite(&reg,sizeof reg,1, pAlu);
+    fread(&reg,sizeof reg,1, pAlu);
+    reg.Mostrar();
+    fread(&reg,sizeof reg,1, pAlu);
+    reg.Mostrar();
+
+    fclose(pAlu);
+    system("pause");*/
+    int opc;
+    while(true)
+    {
+        system("cls");
+        cout << "  MENU ALUMNOS  " << endl;
+        cout << "***************" << endl;
+        cout << "1. AGREGAR REGISTRO" << endl;
+        cout << "2. MOSTRAR REGISTROS" << endl;
+        cout << "0. SALIR" << endl;
+        cout << "***************" << endl;
+
+        cout << "Opcion: ";
+        cin >> opc;
+        system("cls");
+
+        switch(opc)
+        {
+        case 1:
+            if(GrabarRegistro())
+            {
+                cout << "REGISTRO AGREGADO" << endl;
+            } else{
+
+            cout << "NO SE PUDO AGREGAR EL REGISTRO" << endl;
+            }
+
+            break;
+
+        case 2:
+
+            if(!(MostrarRegistro()))
+            {
+
+                cout << "ERROR AL LEER EL ARCHIVO DE ALUMNOS" << endl;
+
+            }
+
+            break;
+
+        case 0:
+            return 0;
+            break;
+
+
+        }
+
+        system("pause");
+
+
+    }
+    system("pause");
     return 0;
 }
 
+/*bool grabarVector(Alumno *vAlu, int cantReg){
 
 
+    fwrite(vAlu, sizeof(Alumno),cantReg,p);
 
+}
 
-
-
-
+bool grabarVector(){
+    Alumno vAlu[5];
+    cargarVector(vAlu, 5);
+    //fwrite(vAlu, sizeof(Alumno),5,p);
+    fwrite(vAlu, sizeof vAlu,1,p);*/
 
