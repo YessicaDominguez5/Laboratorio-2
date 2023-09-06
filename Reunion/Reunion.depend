@@ -1,0 +1,46 @@
+# depslib dependency file v1.0
+1694016782 source:c:\users\yeppi\documents\utn\laboratorio-2\reunion\src\persona.cpp
+	"Persona.h"
+
+1694015671 c:\users\yeppi\documents\utn\laboratorio-2\reunion\include\persona.h
+	<string>
+
+1694033469 source:c:\users\yeppi\documents\utn\laboratorio-2\reunion\src\reunion.cpp
+	"Reunion.h"
+
+1694030723 c:\users\yeppi\documents\utn\laboratorio-2\reunion\include\reunion.h
+	"Persona.h"
+	"fechahorario.h"
+	<string>
+
+1694033217 source:c:\users\yeppi\documents\utn\laboratorio-2\reunion\main.cpp
+	<iostream>
+	"Reunion.h"
+	"Persona.h"
+	<cstdlib>
+	<cstring>
+
+1694014697 source:c:\users\yeppi\documents\utn\laboratorio-2\reunion\src\fecha.cpp
+	<ctime>
+	<iostream>
+	"fecha.h"
+
+1694014697 c:\users\yeppi\documents\utn\laboratorio-2\reunion\include\fecha.h
+	<string>
+
+1694014697 source:c:\users\yeppi\documents\utn\laboratorio-2\reunion\src\fechahorario.cpp
+	"fechahorario.h"
+	"fecha.h"
+	"horario.h"
+
+1694014697 c:\users\yeppi\documents\utn\laboratorio-2\reunion\include\fechahorario.h
+	"fecha.h"
+	"horario.h"
+
+1694014697 c:\users\yeppi\documents\utn\laboratorio-2\reunion\include\horario.h
+	<string>
+
+1694014697 source:c:\users\yeppi\documents\utn\laboratorio-2\reunion\src\horario.cpp
+	"horario.h"
+	<ctime>
+
