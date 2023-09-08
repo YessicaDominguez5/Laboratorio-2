@@ -14,6 +14,10 @@
 	<iostream>
 	"Fecha.h"
 
-1683074708 c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\include\fecha.h
+1694128879 c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\include\fecha.h
+	<string>
+
+1693954077 source:c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\src\fecha.cpp
+	"Fecha.h"
 	<string>
 

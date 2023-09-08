@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1693954077 source:c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\src\fecha.cpp
+	"Fecha.h"
+	<string>
+
+1694112219 c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\include\fecha.h
+	<string>
+
+1694107015 source:c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\src\ingresos.cpp
+	"Ingresos.h"
+
+1694111949 c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\include\ingresos.h
+	<string>
+	"Fecha.h"
+	"Transaccion.h"
+
+1694112273 c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\include\transaccion.h
+	<string>
+	"Fecha.h"
+
