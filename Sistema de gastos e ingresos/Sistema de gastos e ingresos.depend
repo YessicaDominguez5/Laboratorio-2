@@ -1,0 +1,65 @@
+# depslib dependency file v1.0
+1693954077 source:c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\src\fecha.cpp
+	"Fecha.h"
+	<string>
+
+1694112219 c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\include\fecha.h
+	<string>
+
+1694107015 source:c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\src\ingresos.cpp
+	"Ingresos.h"
+
+1694111949 c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\include\ingresos.h
+	<string>
+	"Fecha.h"
+	"Transaccion.h"
+
+1694112273 c:\users\yeppi\documents\utn\laboratorio-2\sistema de gastos e ingresos\include\transaccion.h
+	<string>
+	"Fecha.h"
+
+1694270472 source:c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\src\fecha.cpp
+	"Fecha.h"
+	<string>
+
+1694270472 c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\include\fecha.h
+	<string>
+
+1694270472 source:c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\src\ingresos.cpp
+	"Ingresos.h"
+
+1694270472 c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\include\ingresos.h
+	<string>
+	"Fecha.h"
+	"Transaccion.h"
+
+1694274267 c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\include\transaccion.h
+	<string>
+	"Fecha.h"
+
+1694274533 source:c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\src\sistema.cpp
+	<iostream>
+	"Sistema.h"
+
+1694270472 c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\include\sistema.h
+	"Gastos.h"
+	"Ingresos.h"
+	"Fecha.h"
+
+1694273024 c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\include\gastos.h
+	<string>
+	"Fecha.h"
+	"Transaccion.h"
+
+1694273983 source:c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\src\gastos.cpp
+	"Gastos.h"
+	<string>
+
+1694274254 source:c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\src\transaccion.cpp
+	"Transaccion.h"
+
+1694274310 source:c:\users\juaniyeppi\documents\laboratorio-2\laboratorio-2\sistema de gastos e ingresos\main.cpp
+	<iostream>
+	"Transaccion.h"
+	"Sistema.h"
+

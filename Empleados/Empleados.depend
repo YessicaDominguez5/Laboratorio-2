@@ -1,0 +1,57 @@
+# depslib dependency file v1.0
+1694138198 source:c:\users\yeppi\documents\utn\laboratorio-2\empleados\src\empleados.cpp
+	<iostream>
+	"Empleados.h"
+	"EmpleadosAsalariados.h"
+	"Sistema.h"
+
+1694133753 c:\users\yeppi\documents\utn\laboratorio-2\empleados\include\empleados.h
+	<string>
+
+1694128577 source:c:\users\yeppi\documents\utn\laboratorio-2\empleados\src\empleadoasociado.cpp
+	"EmpleadoAsociado.h"
+
+1694128458 c:\users\yeppi\documents\utn\laboratorio-2\empleados\include\empleadoasociado.h
+	"Fecha.h"
+	"Empleados.h"
+
+1694131990 source:c:\users\yeppi\documents\utn\laboratorio-2\empleados\src\empleadosasalariados.cpp
+	"EmpleadosAsalariados.h"
+	<iostream>
+
+1694131990 c:\users\yeppi\documents\utn\laboratorio-2\empleados\include\empleadosasalariados.h
+	"Empleados.h"
+
+1694130085 source:c:\users\yeppi\documents\utn\laboratorio-2\empleados\src\empleadosporcomision.cpp
+	"EmpleadosPorComision.h"
+
+1694128458 c:\users\yeppi\documents\utn\laboratorio-2\empleados\include\empleadosporcomision.h
+	"Empleados.h"
+
+1694129269 source:c:\users\yeppi\documents\utn\laboratorio-2\empleados\src\empleadosporhora.cpp
+	"EmpleadosPorHora.h"
+
+1694128458 c:\users\yeppi\documents\utn\laboratorio-2\empleados\include\empleadosporhora.h
+	"Empleados.h"
+
+1694138354 source:c:\users\yeppi\documents\utn\laboratorio-2\empleados\main.cpp
+	<iostream>
+	"Empleados.h"
+	"EmpleadoAsociado.h"
+	"Sistema.h"
+
+1694138234 source:c:\users\yeppi\documents\utn\laboratorio-2\empleados\src\sistema.cpp
+	<iostream>
+	"Sistema.h"
+
+1694133855 c:\users\yeppi\documents\utn\laboratorio-2\empleados\include\sistema.h
+	"Empleados.h"
+	"EmpleadosAsalariados.h"
+
+1694128647 c:\users\yeppi\documents\utn\laboratorio-2\empleados\include\fecha.h
+	<string>
+
+1693954077 source:c:\users\yeppi\documents\utn\laboratorio-2\empleados\src\fecha.cpp
+	"Fecha.h"
+	<string>
+

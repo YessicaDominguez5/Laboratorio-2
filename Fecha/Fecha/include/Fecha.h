@@ -16,6 +16,9 @@ class Fecha
         Fecha();
         Fecha(int dia, int mes, int anio);
         void EstablecerFechaPorDefecto();
+        void SetDia(int d);
+        void SetMes(int m);
+        void SetAnio(int a);
         int GetDia();
         int GetMes();
         int GetAnio();
