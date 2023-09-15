@@ -1,13 +1,25 @@
 #include "Fecha.h"
-#include <string>
+
 using namespace std;
 
 void Fecha::EstablecerFechaPorDefecto()
 {
 
-    _dia = 1;
-    _mes = 1;
-    _anio = 1900;
+   //Fecha Actual
+
+time_t t = time(NULL);
+
+
+    struct tm *f = localtime(&t); //local time devuelve un struct tm
+    //por la documentacion
+
+    //f-> es lo mismo que (*f). (hay que indireccionarlo)
+    //ej: _dia = (*f).tm_mday; indirecciona f y accede a tm_mday;
+
+    _dia = f->tm_mday; //vector day of the month[1,31]
+    _mes = f->tm_mon+1; //vector month since January[0,11]
+    _anio = f->tm_year+1900;//year since 1900 2023-1900 = guarda 123 por eso hay que sumarle 1900
+
 
 }
 bool Fecha::EsBisiesto()

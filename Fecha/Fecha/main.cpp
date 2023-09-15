@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-Fecha f1(1,1,2021);
+Fecha f1;
 
 //cout << f1.GetAnio(); //prueba validación de días meses y años correctos
 
@@ -18,7 +18,7 @@ Fecha f1(1,1,2021);
 //f1.RestarDia();
 //cout << f1.ToString();
 
-f1.RestarDias(10);
+//f1.RestarDias(10);
 cout << f1.ToString();
 
 

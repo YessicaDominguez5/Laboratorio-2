@@ -1,6 +1,7 @@
 #ifndef FECHA_H
 #define FECHA_H
 #include <string>
+#include <ctime>
 using namespace std;
 
 

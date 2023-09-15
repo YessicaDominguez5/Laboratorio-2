@@ -10,14 +10,14 @@
 	"Fecha.h"
 	<string>
 
-1682547120 source:c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\main.cpp
+1694749849 source:c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\main.cpp
 	<iostream>
 	"Fecha.h"
 
-1694128879 c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\include\fecha.h
+1694749467 c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\include\fecha.h
 	<string>
+	<ctime>
 
-1693954077 source:c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\src\fecha.cpp
+1694749632 source:c:\users\yeppi\documents\utn\laboratorio-2\fecha\fecha\src\fecha.cpp
 	"Fecha.h"
-	<string>
 
